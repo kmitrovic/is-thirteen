@@ -107,6 +107,17 @@ var is = function is(x) {
             }
             return currYear - parseInt(x) == THIRTEEN
         },
+        friday: function(m, y) {
+            var d = new Date();
+            d.setDate(THIRTEEN);
+            if (typeof m !== 'undefined') {
+                d.setMonth(m);
+                if (typeof y !== 'undefined') {
+                    d.setFullYear(y);
+                }
+            }
+            return d.getDay() === 5;
+        },
         plus: function(y) {
             return is(x + y);
         },
