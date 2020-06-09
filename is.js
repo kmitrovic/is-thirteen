@@ -3,6 +3,7 @@ var consts = require('./consts');
 
 const THIRTEEN = consts.THIRTEEN;
 const THIRTEEN_FUZZ = consts.THIRTEEN_FUZZ;
+const FRIDAY = consts.FRIDAY;
 const thirteenStrings = consts.thirteenStrings;
 
 'use strict';
@@ -116,7 +117,7 @@ var is = function is(x) {
                     d.setFullYear(y);
                 }
             }
-            return d.getDay() === 5;
+            return d.getDay() === FRIDAY;
         },
         plus: function(y) {
             return is(x + y);
