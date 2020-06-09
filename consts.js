@@ -344,5 +344,6 @@ var thirteenStrings = [
 module.exports = {
     THIRTEEN: THIRTEEN,
     THIRTEEN_FUZZ: THIRTEEN_FUZZ,
+    FRIDAY: FRIDAY,
     thirteenStrings: thirteenStrings
 };
