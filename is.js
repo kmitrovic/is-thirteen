@@ -109,7 +109,7 @@ var is = function is(x) {
             return currYear - parseInt(x) == THIRTEEN
         },
         friday13th: function() {
-            if (Object.prototype.toString.call(d) !== '[object Date]') {
+            if (Object.prototype.toString.call(x) !== '[object Date]') {
                 return false;
             }
             return x.getDay() === FRIDAY && x.getDate() === THIRTEEN;
