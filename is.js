@@ -108,16 +108,11 @@ var is = function is(x) {
             }
             return currYear - parseInt(x) == THIRTEEN
         },
-        friday: function(m, y) {
-            var d = new Date();
-            d.setDate(THIRTEEN);
-            if (typeof m !== 'undefined') {
-                d.setMonth(m);
-                if (typeof y !== 'undefined') {
-                    d.setFullYear(y);
-                }
+        friday13th: function() {
+            if (Object.prototype.toString.call(d) !== '[object Date]') {
+                return false;
             }
-            return d.getDay() === FRIDAY;
+            return x.getDay() === FRIDAY && x.getDate() === THIRTEEN;
         },
         plus: function(y) {
             return is(x + y);
